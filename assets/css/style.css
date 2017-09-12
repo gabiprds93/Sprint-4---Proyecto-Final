@@ -1,6 +1,6 @@
 *
 {
-    /outline: 1px solid red;
+    outline: 1px solid red;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,7 +34,7 @@
     color: white;
     background-color: transparent;
 }
-#inicio .btn-pink
+.btn-pink
 {
     color: white;
     background-color: deeppink;
