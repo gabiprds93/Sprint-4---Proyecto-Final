@@ -10,10 +10,10 @@ const aplicacion =
     {
         aplicacion.elemento.checkbox = document.getElementById("checkbox");
         aplicacion.elemento.btnInfoNext = document.getElementById("btnInfoNext");
-        aplicacion.validarFormulario();
+        //aplicacion.validarFormulario();
         aplicacion.validarCheckbox();
     },
-    
+    /*
     validarFormulario: function()
     {
         
@@ -58,7 +58,7 @@ const aplicacion =
             },
             }
         })
-},
+},*/
     validarCheckbox: function()
     {        aplicacion.elemento.checkbox.onclick = function()
         {
