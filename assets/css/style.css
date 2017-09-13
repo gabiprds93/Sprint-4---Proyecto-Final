@@ -39,6 +39,14 @@
     color: white;
     background-color: deeppink;
 }
+#info .nombre
+{
+    padding-right: 0;
+}
+#info .apellido
+{
+    padding-left: 0;
+}
 #mapa 
 {
     position: relative;

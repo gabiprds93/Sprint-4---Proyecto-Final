@@ -10,7 +10,10 @@
         <!-- Fontawesome -->
         <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
         <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="assets/imagenselect/chosen.css">
+        <link rel="stylesheet" type="text/css" href="assets/imagenselect/ImageSelect.css">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/BootstrapFormHelpers-master/dist/css/bootstrap-formhelpers.min.css">
     </head>
     <body>
         <header id="signup">
@@ -37,18 +40,33 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-3">
-                        <button class="btn">
-                            <img src="assets/flags/Peru-Flag-icon.png" class="" alt="Peru" />
-                            <span class="caret"></span>
-                        </button>
-                    </div>
-                    <div class="col-xs-3">
-                        <div>
-                            52
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown"><img src="assets/flags/Peru-Flag-icon.png" alt=""> <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li value="+56"><a href="#"><img src="assets/flags/Chile-Flag-icon.png" alt=""> Chile</a></li>
+                                <li><a href="#"><img src="assets/flags/Mexico-Flag-icon.png" alt=""> México</a></li>
+                                <li><a href="#"><img src="assets/flags/Peru-Flag-icon.png" alt=""> Perú</a></li>
+                            </ul>
                         </div>
+                        <select id="pais">
+<option value="">SELECCIONE UN PAIS</option>
+<option value="+54"><img src="assets/flags/Chile-Flag-icon.png" alt=""> ARGENTINA</option>
+<option value="+56">CHILE</option>
+<option value="+52">MEXICO</option>
+</select>
+<br>
+<input type="text" id="telf" disabled="disabled"/>
+                   <select id="my-select">
+ <option data-img-src="assets/flags/Chile-Flag-icon.png">Adnan Sagar</option>
+ <option selected="selected" data-img-src="assets/flags/Mexico-Flag-icon.png">Rena Cugelman</option>
+ <option data-img-src="assets/flags/Peru-Flag-icon.png">Brain Cugelman</option>
+</select>
                     </div>
-                    <div class="col-xs-6">
-                        <input type="number">
+                    <div class="col-xs-1">
+                        
+                    </div>
+                    <div class="col-xs-8">
+                        <input class="form-control" type="tel">
                     </div>
                 </div>
                 <div class="row">
@@ -58,7 +76,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <button class="btn btn-pink btn-lg btn-block disabled">Next</button>
+                        <a class="btn btn-pink btn-lg btn-block" href="info.html">Next</a>
                     </div>
                 </div>
             </div>
@@ -69,10 +87,11 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- Iconos -->
         <script src="https://use.fontawesome.com/1625bb79ec.js"></script>
+        <script src="assets/imagenselect/jquery-1.11.0.min.js" type="text/javascript"></script>
+        <script src="assets/imagenselect/chosen.jquery.js" type="text/javascript"></script>
+<script src="assets/imagenselect/ImageSelect.jquery.js" type="text/javascript"></script>
+        <script src="assets/BootstrapFormHelpers-master/dist/js/bootstrap-formhelpers.min.js" type="text/javascript"></script>
         <!-- Tu Archivo main.js -->
         <script type="text/javascript" src="assets/js/main.js"></script>
-        <!--MAPA-->
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvTyLEkc70GBmpbdIWEehuA58k76DLndk&callback=initMap&libraries=places"></script>
-
     </body>
 </html>
