@@ -39,6 +39,14 @@
     color: white;
     background-color: deeppink;
 }
+.atras
+{
+    padding-top: 20px;
+}
+.oculto
+{
+    visibility: hidden;
+}
 #info .nombre
 {
     padding-right: 0;

@@ -12,11 +12,16 @@ const aplicacion =
         servicioDirecciones: undefined,
         representacionDirecciones: undefined,
         marcadorAutomatico: undefined,
-        detalleUbicacionAutomatico: undefined
+        detalleUbicacionAutomatico: undefined,
+        alerta: undefined,
+        precio: undefined
+        //ocultos: undefined,
+        
     },
     
     inicio: function()
     {
+        
         aplicacion.elemento.mapa = new google.maps.Map(document.getElementById("mapa"),
         {
             zoom: 5,
@@ -32,14 +37,17 @@ const aplicacion =
         aplicacion.autoCompletarCajaTexto(aplicacion.elemento.cajaTextoDestino);
         aplicacion.elemento.servicioDirecciones = new google.maps.DirectionsService;
         aplicacion.elemento.representacionDirecciones = new google.maps.DirectionsRenderer;
+        //aplicacion.elemento.ocultos = document.getElementsByClassName("oculto");
+        aplicacion.elemento.alerta = document.getElementById("alerta");
+        aplicacion.elemento.precio = document.getElementById("precio");
         aplicacion.establecer();
     },
-    
     establecer: function()
     {
         document.getElementById("ruta").addEventListener("click", function()
         {
             aplicacion.dibujarRuta(aplicacion.elemento.servicioDirecciones, aplicacion.elemento.representacionDirecciones)
+           aplicacion.elemento.alerta.classList.remove("oculto"); //aplicacion.elemento.ocultos.classList.remove("oculto");
         });
         aplicacion.elemento.representacionDirecciones.setMap(aplicacion.elemento.mapa);
     },
@@ -165,7 +173,11 @@ const aplicacion =
             {
                 if (estado === "OK") 
                 {
+                    
                     representacionDirecciones.setDirections(respuesta);
+                    let precioEstimado = respuesta.routes[0].overview_path.length / 10  + "USD";
+                    aplicacion.elemento.precio.innerHTML = precioEstimado;
+                    console.log(precioEstimado);
                 } 
                 else
                 {
